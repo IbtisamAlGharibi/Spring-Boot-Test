@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
@@ -30,5 +31,10 @@ public class Controller {
                 new Book("Harry Potter","b3")
 
                 );
+    }
+
+    @GetMapping
+    public String greeting(@RequestParam String input){
+        return "Hi"+ input;
     }
 }
